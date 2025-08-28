@@ -49,6 +49,7 @@ export const Set = () => {
 
 
     const handleStartValueChange = (value: number) => {
+        console.log(value);
         dispatch(setStartValue(value));
         dispatch(setInputActive(true));
         dispatch(setCounterChanged(false));
@@ -83,7 +84,7 @@ export const Set = () => {
                     <span>max value</span>
                     {/*вынести в компоненту инпут*/}
                     <input
-                        type="number"
+                        type="text"
                         value={maxValue}
                         onFocus = {() => dispatch(setInputActive(true))}
                         onChange={(e) => handleMaxValueChange(+e.target.value)}
@@ -95,7 +96,7 @@ export const Set = () => {
                 <div>
                     <span>start value</span>
                     <input
-                        type="number"
+                        type="text"
                         value={startValue}
                         onFocus = {() => dispatch(setInputActive(true))}
                         onChange={(e) => handleStartValueChange(Number(e.target.value))}
