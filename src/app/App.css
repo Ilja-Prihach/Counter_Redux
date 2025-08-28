@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+  margin: 100px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  border: 2px solid #0af6ca;
+  border-radius: 15px;
+  background-color: #8f8f91;
+}
+
+.counter {
+  width: 200px;
+  height: 300px;
+  border: 2px solid #0af6ca;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar > div {
+  background-image: linear-gradient(to right, #4CAF50, #8BC34A);
+  transition: width 0.3s ease-in-out;
+  height: 100%;
+}
+
+.count {
+  padding: 20px;
+  /*font-weight: bold;*/
+  /*font-size: 40px;*/
+}
+
+.wrapper_button {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border:  2px solid #0af6ca;
+  margin: 0 10px;
+  border-radius: 15px;
+}
+
+.wrapper_set{
+  width: 200px;
+  height: 300px;
+  border: 2px solid #0af6ca;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.wrapper_setValue{
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border:  2px solid #0af6ca;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 12px;
+  font-size: 22px;
+}
+
+.btn {
+  width: 60px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-right: 10px;
+}
