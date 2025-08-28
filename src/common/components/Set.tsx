@@ -61,6 +61,7 @@ export const Set = () => {
         dispatch(setCounterChanged(false));
     };
 
+
     const handleSave = () => {
         localStorage.setItem("saveMaxValue", JSON.stringify(maxValue));
         localStorage.setItem("saveStartValue", JSON.stringify(startValue));
@@ -84,10 +85,10 @@ export const Set = () => {
                     <span>max value</span>
                     {/*вынести в компоненту инпут*/}
                     <input
-                        type="text"
+                        type="number"
                         value={maxValue}
                         onFocus = {() => dispatch(setInputActive(true))}
-                        onChange={(e) => handleMaxValueChange(+e.target.value)}
+                        onChange={(e) => handleMaxValueChange(e.target.valueAsNumber)}
                         style={{
                             borderColor: errorMessage ? "red" : "#ccc",
                         }}
@@ -96,10 +97,10 @@ export const Set = () => {
                 <div>
                     <span>start value</span>
                     <input
-                        type="text"
+                        type="number"
                         value={startValue}
                         onFocus = {() => dispatch(setInputActive(true))}
-                        onChange={(e) => handleStartValueChange(Number(e.target.value))}
+                        onChange={(e) => handleStartValueChange(e.target.valueAsNumber)}
                         style={{
                             borderColor: errorMessage ? "red" : "#ccc",
                         }}
