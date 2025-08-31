@@ -10,13 +10,11 @@ import {increment, resetCount, setCounterChanged} from "../../features/model/cou
 
 export const Counter = () => {
     const dispatch = useAppDispatch();
-    const {
-        count,
-        maxValue,
-        startValue,
-        errorMessage,
-        inputActive
-    } = useAppSelector((state) => state.counter);
+    const count = useAppSelector((state) => state.counter.count);
+    const maxValue = useAppSelector((state) => state.counter.maxValue);
+    const startValue = useAppSelector((state) => state.counter.startValue);
+    const errorMessage = useAppSelector((state) => state.counter.errorMessage);
+    const inputActive = useAppSelector((state) => state.counter.inputActive);
 
 
 
