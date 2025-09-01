@@ -7,7 +7,10 @@ import { Input } from "./Input";
 
 export const Set = () => {
     const dispatch = useAppDispatch();
-    const { maxValue, startValue, errorMessage, counterChanged } = useAppSelector((state) => state.counter);
+    const maxValue = useAppSelector((state) => state.counter.maxValue);
+    const startValue = useAppSelector((state) => state.counter.startValue);
+    const errorMessage= useAppSelector((state) => state.counter.errorMessage);
+    const counterChanged = useAppSelector((state) => state.counter.counterChanged);
 
     useEffect(() => {
         if (startValue >= maxValue || startValue < 0) {

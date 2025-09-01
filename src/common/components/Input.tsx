@@ -19,7 +19,7 @@ export const Input: React.FC<InputProps> = ({ value, onChange, label, error = fa
     }, [value]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const inputValue = +e.target.value || 0;
+        const inputValue = +e.target.value;
         onChange(inputValue);
         dispatch(setInputActive(true));
         dispatch(setCounterChanged(true));
@@ -38,14 +38,6 @@ export const Input: React.FC<InputProps> = ({ value, onChange, label, error = fa
         dispatch(setInputActive(true));
     };
 
-    // const handleBlur = () => {
-    //     const finalCleanedValue = displayValue.replace(/^0+/, '') || '0';
-    //     if (displayValue !== finalCleanedValue) {
-    //         setDisplayValue(finalCleanedValue);
-    //         const num = Number(finalCleanedValue) || 0;
-    //         onChange(num);
-    //     }
-    // };
 
     return (
         <div>
@@ -64,3 +56,13 @@ export const Input: React.FC<InputProps> = ({ value, onChange, label, error = fa
         </div>
     );
 };
+
+
+// const handleBlur = () => {
+//     const finalCleanedValue = displayValue.replace(/^0+/, '') || '0';
+//     if (displayValue !== finalCleanedValue) {
+//         setDisplayValue(finalCleanedValue);
+//         const num = Number(finalCleanedValue) || 0;
+//         onChange(num);
+//     }
+// };
