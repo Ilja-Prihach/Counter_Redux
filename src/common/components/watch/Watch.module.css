@@ -1,0 +1,96 @@
+.wrapper {
+    display: grid;
+    gap: 16px;
+    place-items: center;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.digital {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    font-variant-numeric: tabular-nums;
+}
+
+.colon {
+    margin: 0 2px;
+}
+
+/* круг часов */
+.clock {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(#fff 60%, #f7f7f7);
+    border: 8px solid #111;
+    box-shadow:
+            0 6px 18px rgba(0,0,0,0.2),
+            inset 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* часовые риски (12 штук) */
+.tick {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    width: 4px;
+    height: 18px;
+    background: #111;
+    transform-origin: 50% 116px; /* выравниваем относительно центра круга */
+    border-radius: 2px;
+}
+
+/* общие стили стрелок */
+.hand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 50% 85%;  /* вращаем вокруг нижней части стрелки */
+    transition: transform 0.2s cubic-bezier(.2,.7,.3,1); /* мягкая анимация */
+}
+
+/* часовая */
+.hour {
+    width: 8px;
+    height: 70px;
+    background: #111;
+    border-radius: 6px;
+    margin-left: -4px;   /* половина ширины */
+    margin-top: -60px;   /* чтобы ось была в центре */
+}
+
+/* минутная */
+.minute {
+    width: 6px;
+    height: 95px;
+    background: #222;
+    border-radius: 6px;
+    margin-left: -3px;
+    margin-top: -85px;
+}
+
+/* секундная (тонкая с акцентом) */
+.second {
+    width: 2px;
+    height: 110px;
+    background: #e53935;
+    border-radius: 2px;
+    margin-left: -1px;
+    margin-top: -100px;
+    box-shadow: 0 0 6px rgba(229,57,53,0.6);
+}
+
+/* центральная точка */
+.pivot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    margin-top: -7px;
+    background: #111;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
